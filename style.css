@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+main {
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-section,
+.projects-mar,
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar */
+.header-main {
+  font-family: "Roboto Mono", monospace;
+  min-height: 100vh;
+}
+
+.navbar-nav li {
+  margin-left: 20px;
+}
+
+.media-icons i {
+  width: 25px;
+  font-size: 30px;
+  color: #3d535f;
+  margin: 25px 10px;
+}
+
+.options-nav li {
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+
+.options-nav a:hover,
+.media-icons i:hover,
+.options-nav li a.active {
+  color: #993d95;
+  font-weight: 500;
+}
+
+/* Home */
+
+.greeting-mar button {
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+  color: #000000;
+}
+
+.greeting-mar button:hover {
+  background-color: #993d95;
+}
+
+#splash {
+  position: absolute;
+  animation: animate 10s infinite 0.5s;
+  z-index: -1;
+  width: 210px;
+}
+
+#photo-mar {
+  border-radius: 100%;
+  z-index: 1;
+  width: 200px;
+}
+
+.imgbox {
+  position: relative;
+  top: 0px;
+  left: 0;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.4;
+  }
+}
+
+#cursor {
+  color: #007200;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+}
+
+/* About me */
+.about-section {
+  height: 100vh;
+}
+
+.tech-img {
+  max-width: 60px;
+}
+
+.card-img {
+  max-height: 200px;
+}
+
+/* Projects */
+.projects-mar {
+  height: 160vh;
+}
+
+.card-project {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 400ms ease;
+}
+
+.card-project:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+/* Contact */
+.contact-me {
+  height: 60vh;
+}
+
+#mail-icon {
+  color: #993d95;
+  font-size: 25px;
+}
+
+.contact-me .card {
+  box-shadow: 5px 10px #888888;
+}
+
+/* Media query */
+
+@media (max-width: 760px) {
+  .header-main {
+    min-height: 73vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-me {
+    height: 100vh;
+  }
+
+  .projects-mar {
+    height: 300vh;
+  }
+
+  #photo-mar,
+  #splash {
+    max-width: 100px;
+  }
+
+  .greeting-mar {
+    margin-top: -200px;
+  }
+}
